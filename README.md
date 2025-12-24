@@ -126,11 +126,3 @@ digilibz/
 └── README.md               # Dokumentasi Proyek
 
 ```
-
-## 🤝 Kontribusi
-
-Kontribusi selalu diterima! Silakan buat *Pull Request* atau laporkan masalah (issue) jika menemukan *bug*.
-
-## 📄 Lisensi
-
-Proyek ini dilindungi di bawah lisensi yang tercantum dalam file `LICENSE` (Lihat file LICENSE untuk detailnya).
