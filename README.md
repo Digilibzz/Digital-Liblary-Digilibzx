@@ -1,128 +1,168 @@
-# Digilibz - Digital Library Management System
+<div align="center">
 
-**Digilibz** adalah platform perpustakaan digital modern yang dirancang untuk mempermudah pengelolaan koleksi buku, transaksi peminjaman, serta interaksi antara pengguna dan administrator. Dengan antarmuka yang ramah pengguna dan fitur canggih, Digilibz memungkinkan mahasiswa dan dosen untuk mengakses buku dengan mudah, memberikan ulasan, dan mendapatkan rekomendasi buku berbasis kecerdasan buatan (AI). Untuk administrator, Digilibz menyediakan alat yang efisien untuk mengelola buku, pengguna, dan transaksi, ini membuat manajemen perpustakaan lebih terorganisir dan otomatis.
+  <h1>📚 Digilibzx - Digital Library Management System</h1>
 
-## 🚀 Teknologi yang Digunakan
+  ![Digilibz Banner](https://img.shields.io/badge/Digilibz-Digital%20Library-blue?style=for-the-badge)
+  ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+  ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Proyek ini dibangun menggunakan arsitektur *monorepo* (backend dan frontend dalam satu repositori) dengan *tech stack* berikut:
+**Digilibz** merupakan solusi sistem manajemen perpustakaan digital fullstack yang komprehensif dan modern, dikembangkan dengan integrasi teknologi Java Spring Boot yang tangguh di sisi backend serta Next.js yang responsif di sisi frontend untuk menghadirkan pengalaman pengguna yang mulus dan cepat. Dirancang khusus untuk mentransformasi operasional perpustakaan di lingkungan akademik maupun publik menjadi ekosistem digital yang efisien, sistem ini tidak hanya menyederhanakan proses sirkulasi utama seperti peminjaman dan pengembalian buku secara otomatis, tetapi juga memperkaya interaksi pengguna melalui fitur ulasan, notifikasi real-time, dan ringkasan berbasis AI, sekaligus membekali administrator dengan dashboard statistik analitik untuk pengelolaan inventaris dan pemantauan aktivitas perpustakaan yang lebih transparan, terstruktur, dan terukur dalam satu platform terpadu.
+
+</div>
+
+
+
+
+
+##  Fitur Utama
+
+### 👤 User 
+* **Pencarian Cerdas:** Cari buku berdasarkan judul, kategori, atau penulis.
+* **Sirkulasi Mandiri:** Melakukan peminjaman (Borrow) dan melihat estimasi pengembalian.
+* **Riwayat Transaksi:** Memantau status peminjaman (Pending, Dipinjam, Dikembalikan, Terlambat).
+* **Sistem Review:** Memberikan ulasan dan rating pada buku yang telah dibaca.
+* **Notifikasi Real-time:** Mendapatkan pemberitahuan status peminjaman.
+* **Fitur AI:** Ringkasan buku otomatis (AI Summarize).
+
+### 🛠 Admin
+* **Dashboard Statistik:** Visualisasi data peminjaman, buku populer, dan aktivitas pengguna.
+* **Manajemen Buku:** Tambah, edit, dan hapus data buku (termasuk upload cover).
+* **Manajemen User:** Mengelola akun pengguna (Admin, Dosen, Mahasiswa).
+* **Approval Peminjaman:** Menyetujui atau menolak permintaan peminjaman buku.
+* **Manajemen Pengembalian:** Memproses pengembalian buku dan denda keterlambatan.
+
+---
+
+<br>
+
+## 🛠️ Tech Stack
 
 ### Backend
-* **Language:** Java
-* **Framework:** Spring Boot 3
-* **Build Tool:** Maven
-* **Database:** SQL (MySQL/PostgreSQL) - *Lihat `backup.sql`*
+* **Framework:** Java Spring Boot 3.x
+* **Language:** Java 17+
+* **Database:** MySQL
 * **Security:** Spring Security & JWT Authentication
-* **Fitur Utama:** REST API, Manajemen Transaksi, Sistem Notifikasi.
+* **Build Tool:** Maven
 
 ### Frontend
-* **Framework:** Next.js 14 (App Router)
+* **Framework:** Next.js 14/15 (App Router)
 * **Language:** TypeScript
-* **Styling:** Tailwind CSS
-* **UI Components:** Shadcn UI
-* **Icons:** Lucide React / SVG Assets
-* **Package Manager:** pnpm
-* **Integrasi AI:** Fitur ringkasan buku otomatis.
+* **Styling:** Tailwind CSS & Shadcn UI
+* **State Management:** React Hooks
+* **Package Manager:** pnpm / npm
 
 ---
 
-## ✨ Fitur Utama
+<br>
 
-### 👤 Pengguna (Mahasiswa/Dosen)
-* **Otentikasi:** Register dan Login (Role based).
-* **Koleksi Buku:** Mencari, memfilter, dan melihat detail buku.
-* **Peminjaman:** Sistem "Keranjang" peminjaman dan pembuatan Invoice peminjaman.
-* **Ulasan:** Memberikan rating dan komentar pada buku untuk berbagi opini.
-* **Personalisasi:** Bookmark buku dan rekomendasi buku.
-* **Riwayat:** Melihat riwayat transaksi peminjaman dan pengembalian.
-* **AI Summary:** Mendapatkan ringkasan isi buku menggunakan AI.
+## 📂 Struktur Proyek
 
-### 🛡️ Administrator
-* **Dashboard Statistik:** Grafik peminjaman, total buku, dan aktivitas pengguna.
-* **Manajemen Buku:** Menambah, mengedit, dan menghapus data buku dengan mudah.
-* **Manajemen User:** Mengelola data pengguna (Mahasiswa/Dosen/Admin).
-* **Manajemen Transaksi:** memvalidasi peminjaman dan proses pengembalian buku.
-* **Laporan:** Memantau status buku dan denda transaksi secara efisien.
-
----
-
-## 🛠️ Persiapan Instalasi
-
-Pastikan Anda telah menginstal perangkat lunak berikut di komputer Anda:
-1.  **Java Development Kit (JDK) 17** atau lebih baru.
-2.  **Node.js** (Versi LTS disarankan).
-3.  **Maven** (Untuk build backend).
-4.  **Database Server** (MySQL atau PostgreSQL).
-
----
-
-## ⚙️ Panduan Instalasi & Menjalankan Aplikasi
-
-### 1. Setup Database
-Sebelum menjalankan backend, impor file database yang tersedia:
-1.  Buat database baru di local server Anda (misal: `digilibz_db`).
-2.  Import file SQL yang terletak di:
-    `backend/src/main/resources/db/backup.sql`
-
-### 2. Menjalankan Backend (Spring Boot)
-
-Buka terminal dan arahkan ke folder `backend`:
-
-```bash
-cd backend
+```text
+root/
+├── backend/            # Source code Backend (Spring Boot)
+│   ├── src/main/java   # Controllers, Services, Repositories, Models
+│   └── src/main/resources
+│       └── db/         # SQL Backup (backup.sql)
+├── frontend/           # Source code Frontend (Next.js)
+│   ├── app/            # Pages & Routing
+│   ├── components/     # Reusable UI Components
+│   └── lib/            # API Helper Functions
+└── document/           # Dokumentasi Proyek (API Docs, ERD, SRS)
 
 ```
 
-Konfigurasi koneksi database (jika perlu) pada file `application.properties` (atau buat jika belum ada), lalu jalankan aplikasi:
+<br>
 
+---
+
+## ⚙️ Cara Instalasi & Menjalankan
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek di lokal komputer Anda.
+
+### 1. Persiapan Database
+
+1. Pastikan **MySQL** sudah berjalan.
+2. Buat database baru bernama `digilibz_db` (atau sesuaikan dengan konfigurasi Anda).
+3. Import file database awal yang terletak di:
+`backend/src/main/resources/db/backup.sql`
+
+### 2. Konfigurasi Backend (Spring Boot)
+
+1. Buka folder `backend` di IDE (IntelliJ IDEA / VS Code).
+2. Buka file `src/main/resources/application.properties` (atau `.yml`).
+3. Sesuaikan konfigurasi database Anda:
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/digilibz_db
+spring.datasource.username=root
+spring.datasource.password=password_mysql_anda
+
+# JWT Configuration
+jwt.secret=masukkan_secret_key_yang_panjang_dan_aman_disini
+jwt.expiration=86400000
+
+```
+
+
+4. Jalankan aplikasi dengan perintah:
 ```bash
-# Install dependencies
-mvn clean install
-
-# Jalankan aplikasi
 mvn spring-boot:run
 
 ```
 
-*Backend akan berjalan secara default di port `8080`.*
 
-### 3. Menjalankan Frontend (Next.js)
+*Backend akan berjalan di port `8080`.*
 
-Buka terminal baru (jangan matikan terminal backend) dan arahkan ke folder `frontend`:
+### 3. Konfigurasi Frontend (Next.js)
 
+1. Buka terminal baru dan masuk ke folder `frontend`.
 ```bash
 cd frontend
 
 ```
 
-Instal dependensi dan jalankan server pengembangan:
 
+2. Install dependencies:
 ```bash
-# Install dependencies menggunakan pnpm (disarankan karena ada pnpm-lock.yaml)
-npm install -g pnpm  # Jika pnpm belum terinstall
 pnpm install
-
-# Jalankan mode development
-pnpm dev
+# atau jika menggunakan npm:
+npm install
 
 ```
+
+
+3. Buat file `.env.local` di dalam folder `frontend` dan tambahkan:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
+
+```
+
+
+4. Jalankan server frontend:
+```bash
+pnpm dev
+# atau
+npm run dev
+
+```
+
 
 *Frontend akan berjalan di `http://localhost:3000`.*
 
+<br>
+
 ---
 
-## 📂 Struktur Proyek
+## 📝 Dokumentasi API
 
-```
-digilibz/
-├── backend/                # Source code Spring Boot
-│   ├── src/main/java       # Controllers, Services, Models
-│   ├── src/main/resources  # Konfigurasi DB, SQL Backup
-│   └── pom.xml             # Maven dependencies
-├── frontend/               # Source code Next.js
-│   ├── app/                # Pages & Routing (App Router)
-│   ├── components/         # UI Components (Shadcn)
-│   ├── lib/                # API calls & Utilities
-│   └── public/             # Assets (Images, Icons)
-└── README.md               # Dokumentasi Proyek
+Dokumentasi lengkap mengenai endpoint API dapat ditemukan di folder `document/`:
 
-```
+* [API Documentation](https://www.google.com/search?q=document/DocsApi.md)
+
+<br>
+
+## 📄 Lisensi
+
+Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
+
